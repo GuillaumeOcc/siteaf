@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Abercrombie</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<% if current_user %>
+	Connecte en tant que : <%= current_user.login %><br /> 
+	<%= link_to "Se deconnecter", logout_path %>
+<% else %>
+	<%= link_to "Se connecter", login_path %>
+<% end %>
+
+| <%= link_to 'Accueil', root_path %>	
+
+<%= yield %>
+
+</body>
+</html>

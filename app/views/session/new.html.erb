@@ -1,0 +1,9 @@
+<h1>Nouvelle session </h1>
+
+<%= form_tag login_path do %>
+	
+	<%= text_field_tag :login, params[:login] %>
+	<%= text_field_tag :password %>
+	<%= submit_tag %>
+
+<% end %>
